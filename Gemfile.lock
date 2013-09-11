@@ -28,8 +28,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    maruku (0.6.1)
-      syntax (>= 1.0.0)
     middleman (3.1.5)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.2)
@@ -41,9 +39,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.1.20)
       uglifier (~> 2.1.0)
-    middleman-blog (3.2.0)
-      maruku (~> 0.6.0)
+    middleman-blog (3.3.0)
       middleman-core (~> 3.0)
+      middleman-more (~> 3.0)
       tzinfo (~> 0.3.0)
     middleman-core (3.1.5)
       activesupport (~> 3.2.6)
@@ -85,7 +83,6 @@ GEM
     sprockets-sass (1.0.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
-    syntax (1.0.0)
     temple (0.6.5)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
@@ -103,6 +100,6 @@ PLATFORMS
 DEPENDENCIES
   builder (~> 3.0.0)
   middleman (~> 3.1.1)
-  middleman-blog (~> 3.2.0)
+  middleman-blog (~> 3.3.0)
   slim
   therubyracer
