@@ -1,0 +1,28 @@
+@import "normalize-css";
+@import "bourbon";
+@import "grid-settings";
+@import "neat";
+@import "colors";
+
+@import "topbar";
+
+html {
+  font-family: source-sans-pro, sans-serif;
+}
+
+.content-container {
+  @include outer-container;
+}
+
+#main-content {
+  @include span-columns(8);
+
+  p {
+    font-size: $baseline * 2.44; // ~ 22px
+    line-height: $baseline * 3; // 27px
+  }
+}
+
+#main-sidebar {
+  @include span-columns(4);
+}

@@ -1,30 +1,58 @@
 doctype html
-html
+html lang="pl"
   head
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"
-  body
-    #main role="main"
-      == yield
 
-    aside
-      h2 Recent Articles
-      ol
-        - blog.articles[0...10].each do |article|
-          li
-            = link_to article.title, article
-            span= article.date.strftime('%b %e')
+    title Kosynierski Blogasek
 
-      h2 Tags
-      ol
-        - blog.tags.each do |tag, articles|
-          li
-            = link_to tag, tag_path(tag)
-            |(#{articles.size})
+    = javascript_include_tag "http://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"
+    = stylesheet_link_tag "application", media: "all"
+  body.root
+    header.page-header
+      .topbar
+        .content-container
+          nav.page-nav role="navigation"
+            = link_to 'Kosynierzy', 'http://kosynierzy.info/', role: 'menuitem'
+            = link_to 'Forum', 'http://forum.kosynierzy.info/', role: 'menuitem'
 
-      h2 By Year
-      ol
-        - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-          li
-            = link_to year, blog_year_path(year)
-            |(#{articles.size})
+      .banner role="banner"
+        .content-container
+          a href="http://kosynierzy.info/" title="Kosynierzy" Kosynierzy
+
+    .site
+      .content-container
+        #main-content role="main"
+          div
+            h1 Example content
+            p Do ligi pozostał niecały miesiąc. To mało, a jeśli porównać z pięcioletnim okresem spędzonym w niebycie (żeby nie powiedzieć odbycie) to tyle co nic. Z tej okazji mała wskazówka dla wszystkich tych, którzy niespecjalnie kontaktują, co się w tym okresie działo w Śląsku.
+            p Poprzedni sezon, szczególnie mecz z Anwilem w Orbicie, dał namiastkę zjawiska, którego możemy się spodziewać w zwiększonej dawce w zbliżającym się sezonie. Masę powrotów. I tłumaczeń:
+          == yield
+
+        aside#main-sidebar
+          h2 Recent Articles
+          ol
+            - blog.articles[0...10].each do |article|
+              li
+                = link_to article.title, article
+                span= article.date.strftime('%b %e')
+
+          h2 Tags
+          ol
+            - blog.tags.each do |tag, articles|
+              li
+                = link_to tag, tag_path(tag)
+                |(#{articles.size})
+
+          h2 By Year
+          ol
+            - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+              li
+                = link_to year, blog_year_path(year)
+                |(#{articles.size})
+
+    footer.page-footer role="contentinfo"
+      .content-container
+        p Od kołyski aż po grób
+
+    = javascript_include_tag 'application'
