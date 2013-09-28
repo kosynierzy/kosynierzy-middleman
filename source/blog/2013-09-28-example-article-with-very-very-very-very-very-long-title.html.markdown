@@ -8,7 +8,7 @@ tags:
 <figure class="article-figure figure-3x">
   <img src="/images/articles/m/orbita-anwil.jpg" alt="Orbita" />
   <p>
-    <a href="http://placekitten.com">placekitten.com</a>
+    <a href="http://forumwks.pl/">forumwks.pl</a>
     <i class="icon-camera-retro"></i>
   </p>
 </figure>

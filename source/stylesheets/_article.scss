@@ -15,13 +15,23 @@
   margin: $baseline 0;
 }
 .article-title {
+  font-family: pt-serif-caption, sans-serif;
   font-weight: normal;
 }
 .article-title a {
-  color: #444;
+  color: $green;
+  text-shadow: 1px 1px 1px $white;
+  transition: all 0.1s ease-out 0s;
+
+  &:hover {
+    text-decoration: none;
+    color: #111;
+  }
 }
 .article-info {
   font-size: $baseline * 1.5;
+  text-shadow: 1px 1px 1px #fff;
+  color: lighten(#000, 60%);
 
   & > span {
     margin-right: 5px;
@@ -35,9 +45,10 @@
 .article-figure {
   background-color: lighten($green, 5%);
   border: 1px solid $green;
-  padding: $baseline;
+  padding: $baseline * 2/3;
   margin-bottom: $gutter;
   height: $baseline * 27;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 
   img {
     vertical-align: top;
@@ -61,10 +72,10 @@
   }
 }
 .figure-2x {
-  // image width: 138
+  // image width: 144
   @include span-columns(2 of 8);
 }
 .figure-3x {
-  // image width: 231
+  // image width: 237
   @include span-columns(3 of 8);
 }
