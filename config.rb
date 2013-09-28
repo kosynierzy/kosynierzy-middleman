@@ -50,6 +50,8 @@ page "/feed.xml", :layout => false
 # end
 
 activate :directory_indexes
+activate :i18n
+I18n.default_locale = :pl
 
 ###
 # Helpers

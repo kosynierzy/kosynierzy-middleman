@@ -17,6 +17,9 @@
 .article-title a {
   color: #444;
 }
+.article-info {
+  font-size: $baseline * 2;
+}
 .article-figure {
   @include span-columns(2 of 8);
 
