@@ -2,6 +2,10 @@ body {
   background-color: darken(#fff, 10%);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: pt-serif-caption, sans-serif;
+}
+
 .content-container {
   @include outer-container;
 }
