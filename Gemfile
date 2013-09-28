@@ -17,6 +17,7 @@ gem "rails-assets-angular", "1.2.0.rc.2"
 # Frontend
 gem "slim"
 
-# For feed.xml.builder
+# Utils
 gem "builder", "~> 3.0.0"
 gem "therubyracer"
+gem "nokogiri"

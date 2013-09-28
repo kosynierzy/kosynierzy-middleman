@@ -4,48 +4,11 @@
 @import "neat";
 @import "colors";
 
+@import "layout";
 @import "topbar";
+@import "banner";
+@import "article";
 
 html {
   font-family: source-sans-pro, sans-serif;
-}
-
-.content-container {
-  @include outer-container;
-}
-
-.banner {
-  background-image: image-url('banner.jpg');
-  background-position: center top;
-  padding-top: $baseline * 3;
-  height: $baseline * 22; // 198px
-
-  box-shadow: inset 0 -30px 30px -30px rgba(0, 0, 0, 0.7);
-
-  h1 {
-    background-color: transparent;
-    background-image: image-url('logo.png');
-    background-repeat: no-repeat;
-
-    a {
-      width: 400px;
-      height: 100px;
-      text-indent: -169783px;
-      overflow: hidden;
-      display: block;
-    }
-  }
-}
-
-#main-content {
-  @include span-columns(8);
-
-  p {
-    font-size: $baseline * 2.44; // ~ 22px
-    line-height: $baseline * 3; // 27px
-  }
-}
-
-#main-sidebar {
-  @include span-columns(4);
 }

@@ -23,14 +23,10 @@ html lang="pl"
 
     .site
       .content-container
-        #main-content role="main"
-          div
-            h1 Example content
-            p Do ligi pozostał niecały miesiąc. To mało, a jeśli porównać z pięcioletnim okresem spędzonym w niebycie (żeby nie powiedzieć odbycie) to tyle co nic. Z tej okazji mała wskazówka dla wszystkich tych, którzy niespecjalnie kontaktują, co się w tym okresie działo w Śląsku.
-            p Poprzedni sezon, szczególnie mecz z Anwilem w Orbicie, dał namiastkę zjawiska, którego możemy się spodziewać w zwiększonej dawce w zbliżającym się sezonie. Masę powrotów. I tłumaczeń:
+        .page-content role="main"
           == yield
 
-        aside#main-sidebar
+        aside.page-sidebar
           h2 Recent Articles
           ol
             - blog.articles[0...10].each do |article|
