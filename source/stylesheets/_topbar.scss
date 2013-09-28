@@ -10,14 +10,13 @@
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   a {
-    color: #000;
-    text-shadow: 2px 1px 0px rgba(255, 255, 255, .2);
+    color: darken(#fff, 10%);
     text-decoration: none;
     margin-right: 1rem;
 
     &:hover {
       color: #fff;
-      text-shadow: 2px 1px 0px rgba(0, 0, 0, .6);
+      text-shadow: 1px 1px 6px rgba(255, 255, 255, .3);
     }
   }
 }
