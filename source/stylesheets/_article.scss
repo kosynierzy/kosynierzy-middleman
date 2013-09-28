@@ -7,7 +7,7 @@
   p {
     margin: 0 0 $baseline * 3;
     padding: 0;
-    font-size: $baseline * 2;
+    font-size: $baseline * 2.15;
     line-height: $baseline * 3;
   }
 }
@@ -33,8 +33,6 @@
   }
 }
 .article-figure {
-  @include span-columns(2 of 8);
-
   background-color: lighten($green, 5%);
   border: 1px solid $green;
   padding: $baseline;
@@ -62,4 +60,11 @@
     }
   }
 }
-
+.figure-2x {
+  // image width: 138
+  @include span-columns(2 of 8);
+}
+.figure-3x {
+  // image width: 231
+  @include span-columns(3 of 8);
+}
