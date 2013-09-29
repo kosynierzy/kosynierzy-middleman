@@ -1,21 +1,11 @@
-.short-story {
-  h1 {
-    font-size: $baseline * 3.2;
-    line-height: $baseline * 4;
-    margin: 0 0 $baseline;
-  }
-  p {
-    margin: 0 0 $baseline * 3;
-    padding: 0;
-    font-size: $baseline * 2.15;
-    line-height: $baseline * 3;
-  }
-}
 .article-header {
   margin: $baseline 0;
 }
 .article-title {
   font-weight: normal;
+  font-size: $baseline * 3.2;
+  line-height: $baseline * 4;
+  margin: 0 0 $baseline;
 }
 .article-title a {
   color: $green;
@@ -41,12 +31,28 @@
     font-size: $baseline * 1.8;
   }
 }
+.article-content {
+  & > p {
+    margin: 0;
+    padding: 0;
+    font-size: $baseline * 2.15;
+    line-height: $baseline * 3;
+    text-indent: 1em;
+  }
+}
+.read-more {
+  float: right;
+
+  i {
+    margin-left: 5px;
+    font-size: $baseline * 1.8;
+  }
+}
 .article-figure {
   background-color: lighten($green, 5%);
   border: 1px solid $green;
   padding: $baseline * 2/3;
   margin-bottom: $gutter;
-  height: $baseline * 27;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 
   img {
@@ -77,4 +83,15 @@
 .figure-3x {
   // image width: 237
   @include span-columns(3 of 8);
+}
+.figure-16y {
+  // image height: 144
+  height: $baseline * 21;
+}
+.figure-22y {
+  // image height: 198
+  height: $baseline * 27;
+}
+.article-footer {
+  @include clearfix;
 }

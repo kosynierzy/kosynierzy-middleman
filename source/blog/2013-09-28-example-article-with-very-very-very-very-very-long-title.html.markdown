@@ -1,11 +1,12 @@
 ---
 title: Jeszcze kosynierka nie zginęła
 date: 2013-09-28 16:23 CEST
-author: yanoo
+authors:
+  - yanoo
 tags:
 ---
 
-<figure class="article-figure figure-3x">
+<figure class="article-figure figure-3x figure-22y">
   <img src="/images/articles/m/orbita-anwil.jpg" alt="Orbita" />
   <p>
     <a href="http://forumwks.pl/">forumwks.pl</a>

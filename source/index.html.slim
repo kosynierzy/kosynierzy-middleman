@@ -9,22 +9,24 @@ per_page: 10
     p= link_to 'Previous page', prev_page
 
 - page_articles.each_with_index do |article, i|
-  article.short-story
+  article.article
     header.article-header
       h1.article-title
         = link_to article.title, article
       .article-info
         span.author
           i.icon-user
-          span= article.data.author
+          span= article.data.authors.join(', ')
         span.date
           i.icon-calendar-empty
           span= I18n.localize(article.date, format: '%e %b %Y')
-    .content= article.summary
-    footer
-      span.fb-share Podziel się na fejsiku
-      span.comments-counter 0
-      span.read-more= link_to t(:read_more), article
+    .article-content= article.summary
+    footer.article-footer
+      /* span.fb-share Podziel się na fejsiku */
+      /* span.comments-counter 0 */
+      span.read-more
+        = link_to t(:read_more), article
+        i.icon-bullhorn
 
 - if paginate
   - if next_page
