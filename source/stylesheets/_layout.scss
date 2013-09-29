@@ -32,3 +32,20 @@ a {
     text-decoration: underline;
   }
 }
+
+.page-footer {
+  margin-top: $baseline * 3;
+  background-color: $green;
+  color: #fff;
+
+  .content-container {
+    background-image: image-url('herb-footer.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+  }
+
+  p {
+    line-height: $baseline * 9;
+    padding-left: $baseline * 11;
+  }
+}
