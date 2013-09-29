@@ -40,12 +40,11 @@ a {
 
   .content-container {
     background-image: image-url('herb-footer.png');
-    background-position: 0 50%;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
   }
 
   p {
     line-height: $baseline * 9;
-    padding-left: $baseline * 11;
   }
 }
